@@ -26,6 +26,15 @@ RSpec.describe 'text_checker method' do
     expect(result).to eq false
   end
 
+  it "returns true if text has capital letter and an exclamation mark" do
+    result = text_checker("Once upon a time!")
+    expect(result).to eq true
+  end
+
+  it "returns true if text has capital letter and a question mark" do
+    result = text_checker("Once upon a time?")
+    expect(result).to eq true
+  end
 end
 
 
