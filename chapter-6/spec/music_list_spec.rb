@@ -37,7 +37,7 @@ RSpec.describe MusicList do
       expect(music_list.list).to eq ["Blue Monday", "Kierto"]
     end
 
-    it "returns an error uf you try to delete something not in the list" do
+    it "returns an error if you try to delete something not in the list" do
       music_list = MusicList.new
       music_list.add("Kierto")
       expect { music_list.delete("Ebb and flow") }.to raise_error "Not in the list."
